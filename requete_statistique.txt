@@ -1,0 +1,47 @@
+SELECT COUNT(F.idFédération) AS nbFed
+FROM Fédération F
+;
+
+SELECT COUNT(C.idComité) AS nbCR
+FROM Comité C
+WHERE C.niveauComité = 'reg'
+;
+
+SELECT COUNT(C.idComité) AS nbCD
+FROM Comité C
+WHERE C.niveauComité = 'dept'
+;
+
+
+(SELECT LEFT(A.codePostal , 2) AS codeDept, (COUNT(E.idEcole)
+FROM Ecole E, Adresse A
+WHERE A.idAdressse = E.idAdresse
+AND A.codePostal NOT LIKE "97%"
+GROUP BY codeDept)
+UNION
+(SELECT LEFT(A.codePostal , 3) AS codeDept, (COUNT(E.idEcole)
+FROM Ecole E, Adresse A
+WHERE A.idAdressse = E.idAdresse
+AND A.codePostal LIKE "97%"
+GROUP BY codeDept)
+;
+
+SELECT C.nomComité
+FROM Comité C, Fédération F
+WHERE C.idFédération = F.idFédération
+AND C.niveauComité = "reg"
+AND F.nomFédération = " Fédération Française de Danse"
+ORDER BY C.nomComité DESC
+;
+
+SELECT E.nomEcole, A.nomVille, COUNT(DISTINCT numLicence) AS nbAdhérent
+FROM Ecole_De_Danse E, Adresse A, Délivre D, Cours C, est_inscrit I, Adhérent AD
+WHERE E.idAdresse = A.idAdresse
+AND D.idEcole = E.idEcole
+AND D.idCours = C.idCours
+AND I.idCours = C.idCours
+AND I.numLicence = AD.numLicence
+GROUP BY E.idEcole
+ORDER BY nbAdhérent DESC
+LIMIT 5
+;

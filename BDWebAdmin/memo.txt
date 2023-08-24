@@ -1,0 +1,9 @@
+Q1 : <title> du fichier index.php
+   : <span> du fichier static/footer.php
+   : <h1> du fichier static/header.php
+   
+Q2 : <p> du fichier vues/acceuil_vue.php
+
+Q3 : <img> du fichier vues/acceuil_vue.php
+
+Q4 : <a> du fichier static/menu.php

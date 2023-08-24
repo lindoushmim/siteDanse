@@ -1,0 +1,268 @@
+body {
+    background-color: lightgray;
+    height: 65vh;
+}
+
+header, 
+nav,
+main,
+footer {
+    padding: 1em 0;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start ;    
+    background-color: #6699CC;
+    color: black;
+    text-align: center;
+}
+
+.header_titre {
+    width: 80%;
+    text-align: center;
+}
+
+.header_logo {
+    width: 30%;
+    padding-top: 1%;
+}
+
+.header_logo > a > img{
+    width: 20%;
+}
+
+.main_div {
+    display: flex;
+	justify-content: space-between;
+    margin: auto;
+    border: 4px solid gray;
+    border-radius: 1em;
+    box-sizing: border-box;
+	height: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;    
+	/*background-color: gray;*/ 
+    background-color: aliceblue;
+    padding-left: 1em;
+    padding-right: 1em;
+	line-height: 2em;
+    
+}
+
+main {
+	/*background-color: lightgrey;*/ 
+    background-color: white;
+    padding-left: 1em;
+}
+
+footer {
+	display: flex;
+	justify-content: space-around;
+    background-color: aliceblue;
+}
+
+.notification{
+    background-color: #ffffe6;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid  #ffffe6;
+
+}
+
+.panneau{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-y: auto;
+    text-align: center;    
+}
+
+.panneau > div{
+    margin-right: 2%;
+}
+
+.panneau_details{
+    width: 80%;
+}
+
+
+
+.info {
+    margin-top: 10px;
+    text-align: center;
+    color: balck;
+    background-color: #fff2f2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+}
+
+.pageMembre, .inscription {
+    margin-top: 10px;
+    text-align: center;
+    color: balck;
+    background-color: #fff2f2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+}
+
+.header {
+    background-image: url("../img/danse.png");
+    background-size: contain;
+    background-position: center;
+    height: 300px; /* ajustez la hauteur selon vos besoins */
+}
+
+.accueil_description > h1{
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif; /* Exemple de police */
+    font-size: 2em; /* Taille de police */
+    font-weight: bold; /* Gras */
+    color: black; 
+}
+
+.accueil_description > p {
+    font-family: "Open Sans", sans-serif; /* Exemple de police */
+    font-size: 1.2em; /* Taille de police */
+    line-height: 1.5; /* Hauteur de ligne */
+    color: black ; 
+}
+
+.pouralignerbloc { /* pour les blocs de stats dans stats */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+.bloc { /* pour les blocs de stats dans stats */
+    flex-basis: 30%;
+  }
+
+
+.panneauDeBord {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+.panneau_ecole, .panneau_feder{
+    flex-basis: 30%;
+    height: 200px;
+    text-align: center; /* Ajout de la propriété pour centrer le texte */
+    margin-top: 150px; 
+    color: balck;
+    background-color: #fff2f2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    border-radius: 10%;
+}
+
+.titreConnection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 80px;
+}
+  
+.tabFeder, .tableEcoleDanse   {
+    width: 100%;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.redirectionTabFeder, .redirectionTabEcole {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 20px;
+}
+
+.infoTabFeder, .infoTabEcole {
+    width: 70%;
+}
+
+.redirectionTabFeder a {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #0072C6;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.redirectionTabFeder a:hover {
+    background-color: #004F8E;
+    transform: translateY(-3px);
+}
+
+.titreTabFeder, .titreRedirection, .titreTabEcole{
+    color:hotpink;
+}
+
+.acceuil {
+    overflow-y: scroll;
+}
+
+
+/* mise en place pour les liens de redirection dans la page de bord des ecoles */
+.redirectionTabEcole form {
+    margin-bottom: 20px;
+}
+  
+.redirectionTabEcole input[type=submit] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #0072C6;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+  
+.redirectionTabEcole input[type=submit]:hover {
+    background-color: #004F8E;
+    transform: translateY(-3px);
+}
+
+
+/* concernant VIP*/
+
+.descriptionVIP{
+    text-align: center; 
+}
+.choixFedeVIP{
+    text-align: center;
+}
+
+.imageVip {
+    max-width: 100%;
+    overflow-y: auto;
+}
+
+.vip{
+    text-align: center;
+    overflow-y: auto;
+}
