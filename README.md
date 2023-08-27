@@ -14,7 +14,7 @@ Bien plus, une fédération peut organiser une édition de compétion VIP dont l
 
 
 
-<img src="data/imReadme.png" alt="image du site" width="500" height="500">
+<img src="data/imReadme.png" alt="image du site" width="500" height="700">
 
 
 
